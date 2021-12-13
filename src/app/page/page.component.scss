@@ -1,0 +1,88 @@
+:host {
+  display:flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  //font-family: 'MuseoSans-500';
+  //font-family: 'LatoLight', sans-serif;
+  //font-family: 'LatoThin', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  color: #444;
+}
+
+.header {
+  margin-top: 3mm;
+  height: 10mm;
+}
+
+.image {
+  width: 100vw;
+  height: calc(9 * 100vw / 16);
+  object-fit: cover;
+}
+
+.caption {
+  flex-grow: 0.7;
+  align-self: flex-end;
+  font-size: 0.75rem;
+  padding-right: 20mm;
+  padding-top: 1mm;
+}
+
+.month {
+  flex-grow: 0.3;
+  font-size: 2rem;
+  align-self: center;
+}
+
+.days {
+  font-size: 0.75rem;
+  align-self: center;
+  display:flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  & .holiday {
+    font-weight: 500;
+    border-radius: 1rem;
+    border: 1mm solid #333;
+    padding: 1rem 0.5rem !important;
+    margin: 0rem 0.5rem;
+  }
+
+  & .sunday {
+    font-weight: 500;
+    //color: #222;
+  }
+
+  & .day {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1rem;
+
+    & > div {
+      align-self: center;
+    }
+  }
+}
+
+.footer {
+  flex-grow: 0.5;
+  margin-bottom: 3mm;
+}
+
+.cut-off-vertical {
+  margin-left: 3mm;
+  margin-right: 3mm;
+}
+
+.above-title {
+  flex-grow: 0.5;
+}
+
+.title {
+  font-size: 4rem;
+  align-self: center;
+}
