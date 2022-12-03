@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as moment from 'moment';
 import createMomentHolidayConfiguration from "@nesto-software/moment-holiday";
-import { pages, locale, year } from '../../config';
+import {pages, locale, year, aspectRatio} from '../../config';
 
 @Component({
   selector: 'app-page',
@@ -15,7 +15,7 @@ export class PageComponent {
   captions = pages.map((x) => x.caption);
   holidays = createMomentHolidayConfiguration("DE", "SN");
 
-  constructor(private route: ActivatedRoute) { 
+  constructor(private route: ActivatedRoute) {
     this.month = Number(this.route.snapshot.paramMap.get('id')) - 1;
     moment.locale(locale);
     for(let i = 1; i<=31; i++){
@@ -27,7 +27,11 @@ export class PageComponent {
   public isTitlepage() {
     return this.month === -1;
   }
-  
+
+  public getYear() {
+    return year;
+  }
+
   public isHoliday(day) {
     return day.isHoliday(this.holidays);
   }

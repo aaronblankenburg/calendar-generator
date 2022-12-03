@@ -1,0 +1,17 @@
+// DIN-A3 portrait
+:root {
+  --rootFontSize: 3.1mm; //calc(0.5 * 100vw/1.414/42); //0.5cm with DIN-A2 landscape
+  --aspectRatioWidth: 5;
+  --aspectRatioHeight: 6;
+  --daysFontSize: 0.5rem;
+  --holidayBorder: 0.5mm solid #333;
+}
+
+// DIN-A2 landscape
+:root {
+  --rootFontSize: 5mm; //calc(0.5 * 100vw/1.414/42); //0.5cm with DIN-A2 landscape
+  --aspectRatioWidth: 16;
+  --aspectRatioHeight: 9;
+  --daysFontSize: 0.75rem;
+  --holidayBorder: 1mm solid #333;
+}

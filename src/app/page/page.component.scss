@@ -18,7 +18,7 @@
 
 .image {
   width: 100vw;
-  height: calc(9 * 100vw / 16);
+  height: calc(var(--aspectRatioHeight) * 100vw / var(--aspectRatioWidth));
   object-fit: cover;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .days {
-  font-size: 0.75rem;
+  font-size: var(--daysFontSize);
   align-self: center;
   display:flex;
   flex-direction: row;
@@ -46,7 +46,7 @@
   & .holiday {
     font-weight: 500;
     border-radius: 1rem;
-    border: 1mm solid #333;
+    border: var(--holidayBorder);
     padding: 1rem 0.5rem !important;
     margin: 0rem 0.5rem;
   }
@@ -83,6 +83,15 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 3rem;
+  line-height: 3rem;
   align-self: center;
+  padding-top: 1rem;
+}
+.year {
+  font-size: 5rem;
+  line-height: 5rem;
+  align-self: center;
+  font-weight: 500;
+  padding-top: 1rem;
 }

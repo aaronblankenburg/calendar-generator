@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'MuseoSans-500';
   src: url('assets/MuseoSans-500.woff2') format('woff2'),
-      url('assets/MuseoSans-500.woff') format('woff');
+  url('assets/MuseoSans-500.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,10 +27,10 @@
 
 html, body {
   height: 100%;
-  font-size: 5mm; //calc(0.5 * 100vw/1.414/42); //0.5cm with DIN-A2 landscape
-}
-body { 
-  margin: 0; 
+  font-size: var(--rootFontSize);
 }
 
-  
+body {
+  margin: 0;
+}
+
