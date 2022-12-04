@@ -1,6 +1,12 @@
-export const year = 2023;
-export const locale = ["DE", "SN"];
-export const pages = [
+export const year: number = 2023;
+export const locale: string[] = ["DE", "SN"];
+
+interface Page {
+  file: string,
+  caption: string
+}
+
+export const pages: Page[] = [
   {
     file: "eoe/0.jpg",
     caption: "An den Rändern Europas"
@@ -54,6 +60,14 @@ export const pages = [
     caption: "Fagradalsfjall, Island"
   },
 ];
+
+interface SpecialDay {
+  month?: number;
+  caption: string;
+  day: number
+};
+export const specialDays: SpecialDay[] = [];
+
 export const dimensions = {
   DinA2Landscape: {
     width: '600mm',
@@ -64,4 +78,4 @@ export const dimensions = {
     height: '426mm'
   },
 }.DinA2Landscape;
-export const filenamePrefix = "seite";
+export const filenamePrefix: string = "seite";

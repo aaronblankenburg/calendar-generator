@@ -12,14 +12,20 @@
 </ng-template>
 <ng-template #monthPage>
   <div class="caption cut-off-vertical">
-   {{ getCaption() }}
+    {{ getCaption() }}
   </div>
   <div class="month cut-off-vertical">{{days[0].format("MMMM")}}</div>
   <div class="days cut-off-vertical">
-    <div *ngFor="let day of days" [class.holiday]="isHoliday(day)" [class.sunday]="isSunday(day)" class="day">
-      <!--<div>{{day.format("dd")}}</div>-->
-      <div>{{day.format("D")}}</div>
+    <div *ngFor="let day of days">
+      <div [class.holiday]="isHoliday(day)" [class.sunday]="isSunday(day)"
+           [class.specialDay]="isSpecialDay(day)" class="day">
+        <!--<div>{{day.format("dd")}}</div>-->
+        <div>{{day.format("D")}}</div>
+      </div>
+      <div *ngIf="getSpecialDay(day) as special" class="specialDayCaption specialDay">
+        {{ special.caption }}
+      </div>
+    </div>
   </div>
-</div>
 </ng-template>
 <div class="footer cut-off-vertical"></div>

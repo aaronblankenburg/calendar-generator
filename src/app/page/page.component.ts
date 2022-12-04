@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import * as moment from 'moment';
 import createMomentHolidayConfiguration from "@nesto-software/moment-holiday";
-import {pages, locale, year } from '../../config';
+import {pages, locale, year, specialDays} from '../../config';
+import {Moment} from "moment";
 
 @Component({
   selector: 'app-page',
@@ -18,9 +19,9 @@ export class PageComponent {
   constructor(private route: ActivatedRoute) {
     this.month = Number(this.route.snapshot.paramMap.get('id')) - 1;
     moment.locale(locale);
-    for(let i = 1; i<=31; i++){
+    for (let i = 1; i <= 31; i++) {
       const day = moment(new Date(year, this.month, i));
-      if(day.month() === this.month) this.days.push(day);
+      if (day.month() === this.month) this.days.push(day);
     }
   }
 
@@ -40,11 +41,23 @@ export class PageComponent {
     return day.day() === 0;
   }
 
-  public getImage(){
-    return `assets/wallpapers/${pages[this.month+1].file}`;
+  public getImage() {
+    return `assets/wallpapers/${pages[this.month + 1].file}`;
   }
 
-  public getCaption(){
-    return pages[this.month+1].caption;
+  public getCaption() {
+    return pages[this.month + 1].caption;
+  }
+
+  isSpecialDay(day: Moment) {
+    return specialDays.some((special) => special.month
+      ? special.day === day.date() && special.month === this.month + 1
+      : special.day === day.date());
+  }
+
+  getSpecialDay(day: Moment) {
+    return specialDays.find((special) => special.month
+      ? special.day === day.date() && special.month === this.month + 1
+      : special.day === day.date());
   }
 }
