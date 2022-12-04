@@ -46,7 +46,7 @@ export class PageComponent {
   }
 
   public getCaption() {
-    return pages[this.month + 1].caption;
+    return pages[this.month + 1].caption || "";
   }
 
   isSpecialDay(day: Moment) {

@@ -3,7 +3,7 @@ export const locale: string[] = ["DE", "SN"];
 
 interface Page {
   file: string,
-  caption: string
+  caption?: string
 }
 
 export const pages: Page[] = [
@@ -76,6 +76,10 @@ export const dimensions = {
   DinA3Portrait: {
     width: '303mm',
     height: '426mm'
+  },
+  DinA4Portrait: {
+    width: '216mm',
+    height: '303mm'
   },
 }.DinA2Landscape;
 export const filenamePrefix: string = "seite";
