@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as moment from 'moment';
 import createMomentHolidayConfiguration from "@nesto-software/moment-holiday";
-import {pages, locale, year, aspectRatio} from '../../config';
+import {pages, locale, year } from '../../config';
 
 @Component({
   selector: 'app-page',
@@ -41,7 +41,7 @@ export class PageComponent {
   }
 
   public getImage(){
-    return `assets/${pages[this.month+1].file}`;
+    return `assets/wallpapers/${pages[this.month+1].file}`;
   }
 
   public getCaption(){
