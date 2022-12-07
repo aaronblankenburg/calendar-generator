@@ -37,7 +37,6 @@
 }
 
 .days {
-  font-size: var(--daysFontSize);
   align-self: center;
   display:flex;
   flex-direction: row;
@@ -45,15 +44,14 @@
 
   & .holiday {
     font-weight: 500;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: var(--holidayBorder);
-    padding: 1rem 0.5rem !important;
-    margin: 0rem 0.5rem;
+    padding: calc(var(--dayPadding)/2) !important;
+    margin: 0rem calc(var(--dayPadding)/2);
   }
 
   & .sunday {
     font-weight: 500;
-    //color: #222;
   }
 
   & .specialDay {
@@ -62,17 +60,18 @@
   }
 
   & .specialDayCaption {
-    padding-left: 1rem;
+    padding-left: var(--dayPadding);
     position: absolute;
-    transform-origin: 1rem;
+    transform-origin: var(--dayPadding);
     transform: rotate(var(--specialDayInclination));
   }
 
   & .day {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: var(--dayPadding);
     font-size: 1rem;
+    line-height: 1.5rem;
 
     & > div {
       align-self: center;
