@@ -9,7 +9,7 @@ interface Page {
 export const pages: Page[] = [
   {
     file: "eoe/0.jpg",
-    caption: "An den Rändern Europas"
+    caption: "An den Enden Europas"
   },
   {
     file: "eoe/1.jpg",
@@ -82,4 +82,4 @@ export const dimensions = {
     height: '303mm'
   },
 }.DinA2Landscape;
-export const filenamePrefix: string = "seite";
+export const filenamePrefix: string = "eoe23";

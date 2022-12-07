@@ -9,24 +9,24 @@
 //  --dayPadding: 1rem;
 //}
 //
-//// DIN-A2 landscape
-//:root {
-//  --rootFontSize: 5mm; //calc(0.5 * 100vw/1.414/42); //0.5cm with DIN-A2 landscape
-//  --aspectRatioWidth: 16;
-//  --aspectRatioHeight: 9;
-//  --holidayBorder: 1mm solid #333;
-//  --specialDayColor: brown;
-//  --specialDayInclination: 0deg;
-//  --dayPadding: 1rem;
-//}
-
-// DIN-A4 Portrait
+// DIN-A2 landscape
 :root {
-  --rootFontSize: 3.1mm;
-  --aspectRatioWidth: 5;
-  --aspectRatioHeight: 6;
-  --holidayBorder: 0.2rem solid #333;
-  --specialDayColor: red;
+  --rootFontSize: 5mm; //calc(0.5 * 100vw/1.414/42); //0.5cm with DIN-A2 landscape
+  --aspectRatioWidth: 16;
+  --aspectRatioHeight: 9;
+  --holidayBorder: 1mm solid #333;
+  --specialDayColor: brown;
   --specialDayInclination: 0deg;
-  --dayPadding: 0.5rem;
+  --dayPadding: 1rem;
 }
+
+//// DIN-A4 Portrait
+//:root {
+//  --rootFontSize: 3.1mm;
+//  --aspectRatioWidth: 5;
+//  --aspectRatioHeight: 6;
+//  --holidayBorder: 0.2rem solid #333;
+//  --specialDayColor: red;
+//  --specialDayInclination: 0deg;
+//  --dayPadding: 0.5rem;
+//}
