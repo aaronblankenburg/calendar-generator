@@ -8,56 +8,56 @@ interface Page {
 
 export const pages: Page[] = [
   {
-    file: "eoe/0.jpg",
-    caption: "An den Enden Europas"
+    file: "demo/demo.jpg",
+    caption: "Demo Calendar"
   },
   {
-    file: "eoe/1.jpg",
-    caption: "Jökulsárlón, Island"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/2.jpg",
-    caption: "Ståvatn, Norwegen"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/3.jpg",
-    caption: "São Cristovão, Madeira"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/4.jpg",
-    caption: "Kálfafell, Island"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/5.jpg",
-    caption: "Capo d'Orso, Sardinien"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/6.jpg",
-    caption: "Senja, Norwegen"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/7.jpg",
-    caption: "Seljalandsfoss, Island"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/8.jpg",
-    caption: "Punta Goloritzè, Sardinien"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/9.jpg",
-    caption: "Fjaðrárgljúfur, Island"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/10.jpg",
-    caption: "Møysalen, Norwegen"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/11.jpg",
-    caption: "Fanal, Madeira"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
   {
-    file: "eoe/12.jpg",
-    caption: "Fagradalsfjall, Island"
+    file: "demo/demo.jpg",
+    caption: "Something"
   },
 ];
 
@@ -66,7 +66,13 @@ interface SpecialDay {
   caption: string;
   day: number
 };
-export const specialDays: SpecialDay[] = [];
+export const specialDays: SpecialDay[] = [
+  {
+    month: 3,
+    day: 14,
+    caption: 'Pi Day'
+  }
+];
 
 export const dimensions = {
   DinA2Landscape: {
@@ -81,5 +87,5 @@ export const dimensions = {
     width: '216mm',
     height: '303mm'
   },
-}.DinA2Landscape;
-export const filenamePrefix: string = "eoe23";
+}.DinA4Portrait;
+export const filenamePrefix: string = "demo";
