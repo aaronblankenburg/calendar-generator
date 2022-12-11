@@ -1,5 +1,9 @@
 # CalendarGenerator
 
+![Calendar from demo project](docs/demo-pdf-output.png)
+
+## Getting started
+
 Run `npm install` to set up the dependencies.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/page/<month-number>` to access a calendar page.
